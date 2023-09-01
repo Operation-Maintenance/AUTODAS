@@ -63,7 +63,10 @@
       console.log("Code site: " + idElement + " Code das : " + idDas + " Société : " + idSociete + " Zone d'inter :" + idLieux + " Equipements spéciaux : " + idIFSpec + " / " + idSpec + " Nature inter :" + idInter + " Description inter : " + idDesc + " Contact : " + contact + " Adresse : " + idAdresse);
       console.log("Date debut : " + idDatedebut + "Date fin : " + idDatefin);
       // ouverture de la fenêtre pour la region
-      var choix2 = prompt("Sélectionnez une Zone : \n1. NORD\n2. IDF\n3. SUD");
+      var choix2;
+      do {
+          choix2 = prompt("Sélectionnez une Zone : \n1. NORD\n2. IDF\n3. SUD");
+      } while (choix2 !== "NORD" && choix2 !== "IDF" && choix2 !== "SUD");
       // et on lance le mail !
       sendEmail(idElement, idDas, idSociete, idAdresse, idLieux, idInter, idSpec, idDesc, contact, idIFSpec, idDatedebut, idDatefin, choix2);
     }, 10000);
