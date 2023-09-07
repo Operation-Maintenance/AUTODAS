@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         OplusM AUTODAS AGORA
 // @namespace    https://oplusm.fr/
-// @version      3.1.5
+// @version      3.2
 // @description  Envoie semi-automatique de prevenance Agora
 // @author       Adi Lasri
 // @match        https://agora2.cellnextelecom.com/*
@@ -132,6 +132,7 @@
     }
     body += '%0AAvons-nous votre accord pour l’intervention ? %0A';
     body += 'Dans l’attente de votre retour.%0A';
+    body += 'Cordialement,%0A';
 
 
     //var mailtoLink = 'mailto:' + recipient + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body); // encapsulage dans le mailto
@@ -142,6 +143,4 @@
     window.open(urlOWA, "_blank");
     //window.location.href = mailtoLink;
   };
-
-    // OUIOUIOUIOUOI
 })();
