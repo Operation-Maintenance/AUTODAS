@@ -6,8 +6,8 @@
 // @author       Adi Lasri
 // @match        https://agora2.cellnextelecom.com/*
 // @grant        none
-// @updateURL    https://github.com/Operation-Maintenance/AUTODAS/blob/main/autodas.js
-// @downloadURL  https://github.com/Operation-Maintenance/AUTODAS/blob/main/autodas.js
+// @updateURL    https://raw.githubusercontent.com/Operation-Maintenance/AUTODAS/main/autodas.js
+// @downloadURL  https://raw.githubusercontent.com/Operation-Maintenance/AUTODAS/main/autodas.js
 // ==/UserScript===
 
 (function () {
