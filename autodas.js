@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         OplusM AUTODAS AGORA
 // @namespace    https://oplusm.fr/
-// @version      3.1.4
+// @version      3.1.5
 // @description  Envoie semi-automatique de prevenance Agora
 // @author       Adi Lasri
 // @match        https://agora2.cellnextelecom.com/*
@@ -17,8 +17,8 @@
     setTimeout(function () { // récuparation des data nécéssaire
       //const idSociete = document.getElementById('application-AccessManagement-Display-component---accessManagementPhase--accessmanagement_01_01_02-defaultXML--maintainer2-inner').value;
       //const idLieux = document.getElementById('application-AccessManagement-Display-component---accessManagementPhase--accessmanagement_01_01_02-defaultXML--interventionPlace-inner').value;
-      //const idIFSpec = document.getElementById('application-AccessManagement-Display-component---accessManagementPhase--accessmanagement_01_01_03-defaultXML--needEquipement-labelText').textContent;
-      //const idSpec = document.getElementById('application-AccessManagement-Display-component---accessManagementPhase--accessmanagement_01_01_03-defaultXML--specialEquipment-labelText').textContent;
+      const idIFSpec = document.getElementById('application-AccessManagement-Display-component---accessManagementPhase--accessmanagement_01_01_03-defaultXML--needEquipement-labelText').textContent;
+      const idSpec = document.getElementById('application-AccessManagement-Display-component---accessManagementPhase--accessmanagement_01_01_03-defaultXML--specialEquipment-labelText').textContent;
       //const idInter = document.getElementById('application-AccessManagement-Display-component---accessManagementPhase--accessmanagement_01_01_02-defaultXML--interventionType-inner').value;
       //const idDatedebut = document.getElementById('application-AccessManagement-Display-component---accessManagementPhase--accessmanagement_01_01_01-defaultXML--beginDate-inner').value;
       //const idDatefin = document.getElementById('application-AccessManagement-Display-component---accessManagementPhase--accessmanagement_01_01_01-defaultXML--endDate-inner').value;
@@ -46,12 +46,12 @@
         console.log(baliseinput);
       }
       var balisespan = document.getElementsByTagName("span");
-      if (balisespan){
-        var idIFSpec = balisespan[199].textContent;
-        var idSpec = balisespan[205].textContent;
+      //if (balisespan){
+        //var idIFSpec = balisespan[199].textContent;
+        //var idSpec = balisespan[205].textContent;
 
         //console.log(balisespan)
-      }
+      //}
       var balisetextarea = document.getElementsByTagName("textarea");
       if (balisetextarea){
         console.log(balisetextarea);
@@ -107,7 +107,7 @@
         if (choix2 !== null) {
             sendEmail(idElement, idDas, idSociete, idAdresse, idLieux, idInter, idSpec, idDesc, contact, idIFSpec, idDatedebut, idDatefin, choix2,idTbouygues);
         }
-    }, 10000);
+    }, 15000);
    });
 
 
