@@ -1,13 +1,13 @@
 // ==UserScript==
 // @name         OplusM AUTODAS AGORA
 // @namespace    https://oplusm.fr
-// @version      3.1.1
+// @version      3.1.3
 // @description  Envoie semi-automatique de prevenance Agora
 // @author       Adi Lasri
 // @match        https://agora2.cellnextelecom.com/*
 // @grant        none
-// @updateURL    https://raw.githubusercontent.com/Operation-Maintenance/AUTODAS/main/autodas.js
-// @downloadURL  https://raw.githubusercontent.com/Operation-Maintenance/AUTODAS/main/autodas.js
+// @updateURL    https://github.com/Operation-Maintenance/AUTODAS/blob/main/autodas.js
+// @downloadURL  https://github.com/Operation-Maintenance/AUTODAS/blob/main/autodas.js
 // ==/UserScript===
 
 (function () {
@@ -136,6 +136,9 @@
 
     //var mailtoLink = 'mailto:' + recipient + '?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body); // encapsulage dans le mailto
     var urlOWA = "https://outlook.office365.com/owa/?path=/mail/action/compose&to=&subject="+subject+"&body="+body;
+    var senderEmail = "guichet.acces@cellnextelecom.fr"; // Remplacez par l'adresse e-mail de l'expéditeur que vous souhaitez utiliser
+    urlOWA += "&from=" + encodeURIComponent(senderEmail);
+
     window.open(urlOWA, "_blank");
     //window.location.href = mailtoLink;
   };
