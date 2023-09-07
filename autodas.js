@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         OplusM AUTODAS AGORA
 // @namespace    https://oplusm.fr/
-// @version      3.1.3
+// @version      3.1.4
 // @description  Envoie semi-automatique de prevenance Agora
 // @author       Adi Lasri
 // @match        https://agora2.cellnextelecom.com/*
@@ -117,9 +117,9 @@
   function sendEmail(idElement, idDas, idSociete, idAdresse, idLieux, idInter, idSpec, idDesc, contact, idIFSpec, idDatedebut, idDatefin, choix2, idTbouyges) {
     var recipient = ''; // pas de destinataire automatique
     var subject = "CELLNEX "+choix2 + ' Intervention sur les antennes Bouygues Telecom,' + idElement + " // " + idDas; // sujet du mail
-    var body = 'Bonjour,%0A%0ANous sommes la société CELLNEX France mandatée par l\'antenniste Bouygues Telecom. %0A';
+    var body = 'Bonjour,%0A%0ANous sommes la société CELLNEX France mandatée par l\'antenniste Bouygues Telecom. %0A%0A';
     body += 'Nous vous informons que la société ' + idSociete + ' souhaite intervenir sur votre site situé au ' + idAdresse + ' le ' + idDatedebut + ' jusqu\'au ' + idDatefin + '. %0A%0A'; //corps du mail
-    body += 'Ci-dessous les informations concernant l’opération :%0A';
+    body += 'Ci-dessous les informations concernant l’opération :%0A%0A';
     body += 'Référence du site : ' + idElement + ' // ' + idTbouyges + '.%0A';
     body += 'Lieu de l\'intervention : ' + idLieux + '.%0A';
     body += 'Nature d\'intervention : ' + idInter + '.%0A';
